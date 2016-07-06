@@ -1,0 +1,17 @@
+{
+  "name": "kalaiisadog",
+  "version": "1.0.1",
+  "description": "kalai is a dog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "kalai"
+  ],
+  "author": "kalaiisadog",
+  "license": "ISC",
+  "devDependencies": {
+    "classnames": "^2.2.5"
+  }
+}
