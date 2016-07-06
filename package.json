@@ -1,6 +1,6 @@
 {
   "name": "kalaiisadog",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "kalai is a dog",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,13 @@
   "author": "kalaiisadog",
   "license": "ISC",
   "devDependencies": {
-    "classnames": "^2.2.5"
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "classnames": "^2.2.5",
+    "webpack": "^1.13.1"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "react": "^15.2.0"
   }
 }
