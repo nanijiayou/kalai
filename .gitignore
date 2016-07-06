@@ -15,15 +15,11 @@ Thumbs.db
 *.swp
 *.swo
 *.log
-node_modules/
+node_modules
 .buildpath
 .settings
 npm-debug.log
-nohup.out
-_site
-_data
 dist
-/lib
 elasticsearch-*
 config/base.yaml
 typings
