@@ -9,7 +9,6 @@
 *.bak
 .DS_Store
 Thumbs.db
-.project
 .*proj
 .svn/
 *.swp
@@ -17,9 +16,5 @@ Thumbs.db
 *.log
 node_modules
 .buildpath
-.settings
 npm-debug.log
-dist
 elasticsearch-*
-config/base.yaml
-typings
