@@ -46,10 +46,6 @@ export default class SliderGroups extends React.Component{
         if(!this.state.standand) {
             this.setState({
                 isDown  : true,
-                handle  : e.currentTarget,
-                range   : e.currentTarget.parentNode,
-                r       : e.currentTarget.clientWidth / 2,
-                fill    : e.currentTarget.previousSibling,
                 offsetX : e.clientX - this.getElementLeft(e.currentTarget)
             });
         }

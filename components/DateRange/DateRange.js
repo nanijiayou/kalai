@@ -1,39 +1,7 @@
 import React from "react";
 import PickerDateRange from "./pickerDateRange";
 import formatDate from "./formatDate";
-import styles from "./DateRange.css";
-
-
-export default class Time extends React.Component{
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            noTime: false
-        }
-        
-        this.handleDateWarning = this.handleDateWarning.bind(this);
-    }
-    
-    componentDidMount() {
-
-    }
-    
-    handleDateWarning(hasWarning) {
-        this.setState({
-            hasWarning: hasWarning
-        })
-    }
-    
-    render() {
-        return(
-                <div className="analysisItem">
-                    <label className="labelTitle">分析时间:</label>
-                    <TimeSelect hasHour={this.props.hasHour} handleDateWarning={this.handleDateWarning}  hasWarning={this.state.hasWarning}/>
-                </div>
-        )
-    }
-};
+import styles from "./dateRange.css";
 
 export default class DateRange extends React.Component {
     constructor(props) {

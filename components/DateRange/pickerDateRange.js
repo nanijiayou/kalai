@@ -16,7 +16,7 @@
  * @param {String} inputId 日期选择器ID
  * @param {object} options 配置数组
  */
-
+import $ from "jquery";
 function pickerDateRange(inputId, options) {
     /**
      * 默认配置参数数据，每个参数涵义在后解释
