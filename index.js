@@ -18,15 +18,15 @@ export default class App extends React.Component{
     render() {
         return (
             <div>
-                <h2>搜索组建</h2>
+                <h2>1. 搜索组建</h2>
                 <Search />
-                <h2>slider组建</h2>
+                <h2>2. slider组建</h2>
                 <h3>1. normal slider</h3>
                 <Slider />
                 <h3>2. Select slider</h3>
                 <SelectSlider name="美食" type="food" /> 
                 
-                <h2>date range picker</h2>
+                <h2>3. 日期选择组建</h2>
                 <DateRange />
             </div>
         )

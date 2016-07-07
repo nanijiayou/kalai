@@ -16,7 +16,8 @@
  * @param {String} inputId 日期选择器ID
  * @param {object} options 配置数组
  */
-import $ from "jquery";
+
+import $ from 'jquery';
 function pickerDateRange(inputId, options) {
     /**
      * 默认配置参数数据，每个参数涵义在后解释
@@ -73,7 +74,6 @@ function pickerDateRange(inputId, options) {
         weekendDis: false, //灰掉周末不可选。
         disCertainDay: [], //不可用的周日期设置数组，如：[1,3]是要周一， 周三 两天不可选，每个周的周一，周三都不可选择。
         disCertainDate: [], //不可用的日期设置数组，如:[1,3]是要1号，3号 两天不可选，特别的，[true,1,3]则反之，只有1，3可选，其余不可选。
-        ableCertainDays: [], //一段时间内日期可选, 如:['2015-5-1','2015-10-1'];其余可选。
         shortOpr: false, //结合单天日期选择的短操作，不需要确定和取消的操作按钮。
         noCalendar: false, //日期输入框是否展示
         theme: 'gri', //日期选择器的主题，目前支持 'gri' / 'ta'
@@ -93,7 +93,7 @@ function pickerDateRange(inputId, options) {
     this.mOpts.calendars = Math.min(this.mOpts.calendars, 3);
     //根据不同主题需要初始化的变量
     this.mOpts.compareCss = this.mOpts.theme == 'ta' ? this.mOpts.selectCss : this.mOpts.compareCss
-        //昨天,今天,最近7天,最近14天,最近30天    
+    //昨天,今天,最近7天,最近14天,最近30天    
     this.periodObj = {};
     this.periodObj[__method.mOpts.aToday] = 0;
     this.periodObj[__method.mOpts.aYesterday] = 1;
@@ -310,11 +310,11 @@ function pickerDateRange(inputId, options) {
 
         __method.close(1);
         __method.mOpts.success({
-            'startDate': $('#' + __method.startDateId).val(),
-            'endDate': $('#' + __method.endDateId).val(),
-            'needCompare': $('#' + __method.compareCheckboxId).val(),
-            'startCompareDate': $('#' + __method.startCompareDateId).val(),
-            'endCompareDate': $('#' + __method.endCompareDateId).val()
+            'startDate': $('#' + __method.mOpts.startDateId).val(),
+            'endDate': $('#' + __method.mOpts.endDateId).val(),
+            'needCompare': $('#' + __method.mOpts.compareCheckboxId).val(),
+            'startCompareDate': $('#' + __method.mOpts.startCompareDateId).val(),
+            'endCompareDate': $('#' + __method.mOpts.endCompareDateId).val()
         });
         return false;
     });
@@ -936,7 +936,7 @@ pickerDateRange.prototype.show = function(isCompare, __method) {
     if (0 < clientWidth && $("#" + this.calendarId).attr('offsetWidth') + pos.left > clientWidth) {
         left = pos.left + $('#' + this.inputId).attr('offsetWidth') - $("#" + this.calendarId).attr('offsetWidth') + ((/msie/i.test(navigator.userAgent) && !(/opera/i.test(navigator.userAgent))) ? 5 : 0);
     }
-    left = left - 100;
+    left = left - 100 > 10 ? left - 100 : left;
     $("#" + this.calendarId).css('left', left + 'px');
     $("#" + this.calendarId).css('top', pos.top + (offsetHeight ? offsetHeight - 1 : (__method.mOpts.theme == 'ta' ? 35 : 22)) + 'px');
 
@@ -1079,7 +1079,7 @@ pickerDateRange.prototype.fillDate = function(year, month, index) {
         $(table).append(cap);
 
         var thead = document.createElement('thead');
-        tr = document.createElement('tr');
+        var tr = document.createElement('tr');
         var days = ['日', '一', '二', '三', '四', '五', '六'];
         for (var i = 0; i < 7; i++) {
             var th = document.createElement('th');
@@ -1089,7 +1089,8 @@ pickerDateRange.prototype.fillDate = function(year, month, index) {
         $(thead).append(tr);
         $(table).append(thead);
 
-        var tr = document.createElement('tr');
+        var tbody = document.createElement('tbody');
+        tr = document.createElement('tr');
         var td = document.createElement('td');
         // 如果是最后一个月的日期，则加上下一个月的链接
         if (0 == index) {
@@ -1103,12 +1104,13 @@ pickerDateRange.prototype.fillDate = function(year, month, index) {
         $(td).attr('colSpan', 7);
         $(td).css('text-align', 'center');
         $(tr).append(td);
-        $(table).append(tr);
+        $(tbody).append(tr);
+        $(table).append(tbody);
     } else {
         table.className = this.mOpts.theme + '_' + this.mOpts.dateTable;
 
-        tr = document.createElement('tr');
-        td = document.createElement('td');
+        var tr = document.createElement('tr');
+        var td = document.createElement('td');
         // 如果是最后一个月的日期，则加上下一个月的链接
         if (0 == index) {
             $(td).append('<a href="javascript:void(0);" id="' + this.nextMonth + '" class="gri_dateRangeNextMonth"><span>next</span></a>');
@@ -1199,15 +1201,6 @@ pickerDateRange.prototype.fillDate = function(year, month, index) {
                     deviation = '4';
                 }
 
-            }
-            
-            
-            //让一段时间不可选
-            if(this.mOpts.ableCertainDays && this.mOpts.ableCertainDays.length > 0) {
-                var ss = this.checkDateRange(this.mOpts.ableCertainDays[0],this.mOpts.ableCertainDays[1]);
-                //this.mOpts.disCertainDay = [0,1,2,3,4,5,6,7,8];
-                //console.log(__method.calendar_endDate.getMonth());
-                
             }
         }
 
@@ -1335,4 +1328,4 @@ pickerDateRange.prototype.formatDate = function(ymd) {
     });
 };
 
-export default pickerDateRange;
+module.exports = pickerDateRange;

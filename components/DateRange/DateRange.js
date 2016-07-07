@@ -29,11 +29,6 @@ export default class DateRange extends React.Component {
             ableCertainDays:['2015-05-01', '2015-06-12'],
             success: function(rs) {
                 var daysDiff = getDateDiff(rs.startDate, rs.endDate);
-                if(daysDiff > 6) {
-                    self.props.handleDateWarning(true);
-                }else {
-                    self.props.handleDateWarning(false);
-                }
                 var dateRange = {
                     startDate: rs.startDate + ' 00:00:00',
                     endDate: rs.endDate + ' 23:00:00'

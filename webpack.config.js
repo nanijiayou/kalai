@@ -26,7 +26,16 @@ module.exports = {
                     presets: ['react','es2015']
                 }
             },
-            { test: /\.css$/, loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[local]__[hash:base64:5]'},
+            {   
+                test: /\.css$/,
+                exclude: /(DateRange)/,
+                loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[local]__[hash:base64:5]'
+            },
+            {
+                test: /\.css$/,
+                include: /(DateRange)/,
+                loader: 'style-loader!css-loader'
+            }, 
             { test: /\.png$/, loader: "url-loader?limit=1000&name=[path][name].[ext]" },
             { test: /\.jpg$/, loader: "file-loader" }
         ]
