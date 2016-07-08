@@ -9,7 +9,6 @@ export default class DateRange extends React.Component {
     }
 
     componentDidMount() {
-        var self = this;
         var startDate = formatDate(new Date(new Date() - 86400000));
         var endDate = formatDate(new Date());
         function getDateDiff(startDate,endDate) {

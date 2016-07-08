@@ -32165,7 +32165,6 @@
 	    _createClass(DateRange, [{
 	        key: "componentDidMount",
 	        value: function componentDidMount() {
-	            var self = this;
 	            var startDate = (0, _formatDate2.default)(new Date(new Date() - 86400000));
 	            var endDate = (0, _formatDate2.default)(new Date());
 	            function getDateDiff(startDate, endDate) {
