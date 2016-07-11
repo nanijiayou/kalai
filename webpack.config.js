@@ -7,10 +7,11 @@ var webpack = require("webpack");
 
 module.exports = {
     entry: {
+        dist: "./components/index.js",
         index: "./index.js"
     },
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.join(__dirname, 'lib'),
         filename: "[name].js"
     },
     resolve: {
