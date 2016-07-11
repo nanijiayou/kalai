@@ -1,10 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Search from './components/Search/Search';
-import Slider from './components/Slider/Slider';
-import SelectSlider from './components/Slider/SelectSlider';
-import DateRange from './components/DateRange/DateRange';
-import Timeline from './components/Timeline/Timeline';
+import {Search,Slider,DateRange,SelectSlider} from './components/entry';
 
 
 export default class App extends React.Component{
@@ -26,7 +22,7 @@ export default class App extends React.Component{
                 <h3>1. normal slider</h3>
                 <Slider />
                 <h3>2. Select slider</h3>
-                <SelectSlider name="美食" type="food" /> 
+                <SelectSlider />
                 
                 <h2>3. 日期选择组建</h2>
                 <div style={{height:35,width:400}}>
@@ -34,7 +30,6 @@ export default class App extends React.Component{
                 </div>
                 
                 <h2>4. 时间轴</h2> 
-                <Timeline />
             </div>
         )
     }

@@ -58,25 +58,7 @@
 
 	var _reactDom = __webpack_require__(33);
 
-	var _Search = __webpack_require__(170);
-
-	var _Search2 = _interopRequireDefault(_Search);
-
-	var _Slider = __webpack_require__(176);
-
-	var _Slider2 = _interopRequireDefault(_Slider);
-
-	var _SelectSlider = __webpack_require__(179);
-
-	var _SelectSlider2 = _interopRequireDefault(_SelectSlider);
-
-	var _DateRange = __webpack_require__(182);
-
-	var _DateRange2 = _interopRequireDefault(_DateRange);
-
-	var _Timeline = __webpack_require__(188);
-
-	var _Timeline2 = _interopRequireDefault(_Timeline);
+	var _entry = __webpack_require__(170);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -109,7 +91,7 @@
 	                    null,
 	                    '1. 搜索组建'
 	                ),
-	                _react2.default.createElement(_Search2.default, null),
+	                _react2.default.createElement(_entry.Search, null),
 	                _react2.default.createElement(
 	                    'h2',
 	                    null,
@@ -120,13 +102,13 @@
 	                    null,
 	                    '1. normal slider'
 	                ),
-	                _react2.default.createElement(_Slider2.default, null),
+	                _react2.default.createElement(_entry.Slider, null),
 	                _react2.default.createElement(
 	                    'h3',
 	                    null,
 	                    '2. Select slider'
 	                ),
-	                _react2.default.createElement(_SelectSlider2.default, { name: '美食', type: 'food' }),
+	                _react2.default.createElement(_entry.SelectSlider, null),
 	                _react2.default.createElement(
 	                    'h2',
 	                    null,
@@ -135,14 +117,13 @@
 	                _react2.default.createElement(
 	                    'div',
 	                    { style: { height: 35, width: 400 } },
-	                    _react2.default.createElement(_DateRange2.default, null)
+	                    _react2.default.createElement(_entry.DateRange, null)
 	                ),
 	                _react2.default.createElement(
 	                    'h2',
 	                    null,
 	                    '4. 时间轴'
-	                ),
-	                _react2.default.createElement(_Timeline2.default, null)
+	                )
 	            );
 	        }
 	    }]);
@@ -21074,6 +21055,40 @@
 /* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.DateRange = exports.SelectSlider = exports.Slider = exports.Search = undefined;
+
+	var _Search = __webpack_require__(171);
+
+	var _Search2 = _interopRequireDefault(_Search);
+
+	var _Slider = __webpack_require__(177);
+
+	var _Slider2 = _interopRequireDefault(_Slider);
+
+	var _SelectSlider = __webpack_require__(186);
+
+	var _SelectSlider2 = _interopRequireDefault(_SelectSlider);
+
+	var _DateRange = __webpack_require__(180);
+
+	var _DateRange2 = _interopRequireDefault(_DateRange);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.Search = _Search2.default;
+	exports.Slider = _Slider2.default;
+	exports.SelectSlider = _SelectSlider2.default;
+	exports.DateRange = _DateRange2.default;
+
+/***/ },
+/* 171 */
+/***/ function(module, exports, __webpack_require__) {
+
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
@@ -21086,11 +21101,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _jquery = __webpack_require__(171);
+	var _jquery = __webpack_require__(172);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _seacrh = __webpack_require__(172);
+	var _seacrh = __webpack_require__(173);
 
 	var _seacrh2 = _interopRequireDefault(_seacrh);
 
@@ -21283,7 +21298,7 @@
 	});
 
 /***/ },
-/* 171 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -31326,16 +31341,16 @@
 
 
 /***/ },
-/* 172 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(173);
+	var content = __webpack_require__(174);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(175)(content, {});
+	var update = __webpack_require__(176)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -31352,10 +31367,10 @@
 	}
 
 /***/ },
-/* 173 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(174)();
+	exports = module.exports = __webpack_require__(175)();
 	// imports
 
 
@@ -31377,7 +31392,7 @@
 	};
 
 /***/ },
-/* 174 */
+/* 175 */
 /***/ function(module, exports) {
 
 	/*
@@ -31433,7 +31448,7 @@
 
 
 /***/ },
-/* 175 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -31685,7 +31700,7 @@
 
 
 /***/ },
-/* 176 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -31700,7 +31715,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _slider = __webpack_require__(177);
+	var _slider = __webpack_require__(178);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
@@ -31849,16 +31864,16 @@
 	exports.default = Slider;
 
 /***/ },
-/* 177 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(178);
+	var content = __webpack_require__(179);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(175)(content, {});
+	var update = __webpack_require__(176)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -31875,10 +31890,10 @@
 	}
 
 /***/ },
-/* 178 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(174)();
+	exports = module.exports = __webpack_require__(175)();
 	// imports
 
 
@@ -31895,246 +31910,9 @@
 	};
 
 /***/ },
-/* 179 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _selectSlider = __webpack_require__(180);
-
-	var _selectSlider2 = _interopRequireDefault(_selectSlider);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SliderGroups = function (_React$Component) {
-	    _inherits(SliderGroups, _React$Component);
-
-	    function SliderGroups(props) {
-	        _classCallCheck(this, SliderGroups);
-
-	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(SliderGroups).call(this, props));
-
-	        _this.state = {
-	            isSelected: false,
-	            isDown: false
-	        };
-
-	        _this.handleSelected = _this.handleSelected.bind(_this);
-	        _this.handleMousedown = _this.handleMousedown.bind(_this);
-	        _this.handleMousemove = _this.handleMousemove.bind(_this);
-	        _this.handleMouseup = _this.handleMouseup.bind(_this);
-	        _this.handleClick = _this.handleClick.bind(_this);
-	        _this.getElementLeft = _this.getElementLeft.bind(_this);
-	        return _this;
-	    }
-
-	    _createClass(SliderGroups, [{
-	        key: "componentDidMount",
-	        value: function componentDidMount() {
-	            window.addEventListener('mousemove', this.handleMousemove, false);
-	            window.addEventListener('mouseup', this.handleMouseup, false);
-	        }
-	    }, {
-	        key: "getElementLeft",
-	        value: function getElementLeft(element) {
-	            var actualLeft = element.offsetLeft;
-	            var currentElem = element.offsetParent;
-	            while (currentElem !== null) {
-	                actualLeft += currentElem.offsetLeft;
-	                currentElem = currentElem.offsetParent;
-	            }
-	            return actualLeft;
-	        }
-	    }, {
-	        key: "handleSelected",
-	        value: function handleSelected() {
-	            this.setState({
-	                isSelected: !this.state.isSelected
-	            });
-	            if (this.state.isSelected) {}
-	        }
-	    }, {
-	        key: "handleMousedown",
-	        value: function handleMousedown(e) {
-	            if (!this.state.standand) {
-	                this.setState({
-	                    isDown: true,
-	                    offsetX: e.clientX - this.getElementLeft(e.currentTarget)
-	                });
-	            }
-	        }
-	    }, {
-	        key: "handleMousemove",
-	        value: function handleMousemove(e) {
-	            if (this.state.isSelected && this.state.isDown) {
-	                var handle = this.refs.handle;
-	                var range = this.refs.handle.parentNode;
-	                var fill = this.refs.handle.previousSibling;
-	                var left = this.getElementLeft(range);
-
-	                var r = handle.clientWidth / 2;
-	                var max = range.clientWidth - 2 * r;
-	                var x = e.clientX - this.state.offsetX - left;
-
-	                if (x <= 0) {
-	                    x = 0;
-	                } else if (x >= max) {
-	                    x = max;
-	                }
-	                var result = Math.floor((x / max).toFixed(2) * 10);
-	                if (result >= 10) {
-	                    result = 10;
-	                }
-	                this.setState({
-	                    result: result
-	                });
-	                handle.style.left = x + 'px';
-	                fill.style.width = x + r + 'px';
-	            }
-	        }
-	    }, {
-	        key: "handleMouseup",
-	        value: function handleMouseup() {
-	            this.setState({
-	                isDown: false
-	            });
-	        }
-	    }, {
-	        key: "handleClick",
-	        value: function handleClick(e) {
-	            if (this.state.isSelected) {
-	                var handle = this.refs.handle;
-	                var range = this.refs.handle.parentNode;
-	                var fill = this.refs.handle.previousSibling;
-	                var left = this.getElementLeft(range);
-
-	                var r = handle.clientWidth / 2;
-	                var max = range.clientWidth - 2 * r;
-	                var x = e.clientX - r - left;
-
-	                if (x < 0) {
-	                    handle.style.left = 0 + 'px';
-	                    fill.style.width = r + 'px';
-	                } else if (x > max) {
-	                    handle.style.left = max + 'px';
-	                    fill.style.width = max + r + 'px';
-	                } else {
-	                    handle.style.left = x + 'px';
-	                    fill.style.width = x + r + 'px';
-	                }
-	                var result = Math.floor((x / max).toFixed(2) * 10);
-	                if (result >= 10) {
-	                    result = 10;
-	                }
-	                if (result < 0) {
-	                    result = 0;
-	                }
-	                this.setState({
-	                    result: result
-	                });
-	            }
-	        }
-	    }, {
-	        key: "render",
-	        value: function render() {
-	            return _react2.default.createElement(
-	                "div",
-	                { className: this.state.isSelected ? _selectSlider2.default.slider + ' ' + _selectSlider2.default.slider_use : _selectSlider2.default.slider },
-	                _react2.default.createElement(
-	                    "div",
-	                    { className: _selectSlider2.default.slider_title },
-	                    _react2.default.createElement("input", { type: "checkbox", disabled: this.state.standand, onChange: this.handleSelected }),
-	                    _react2.default.createElement(
-	                        "label",
-	                        { htmlFor: "" },
-	                        this.props.name
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    "div",
-	                    { className: _selectSlider2.default.slider_range, onClick: this.handleClick },
-	                    _react2.default.createElement("div", { className: _selectSlider2.default.slider_fill }),
-	                    _react2.default.createElement("div", { className: _selectSlider2.default.slider_handle, ref: "handle", onMouseDown: this.handleMousedown, onMouseUp: this.handleMouseup })
-	                ),
-	                _react2.default.createElement("input", { className: _selectSlider2.default.slider_result, type: "text", value: this.state.result })
-	            );
-	        }
-	    }]);
-
-	    return SliderGroups;
-	}(_react2.default.Component);
-
-	exports.default = SliderGroups;
-
-/***/ },
 /* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(181);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(175)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js?modules&importLoaders=1&localIdentName=[local]__[hash:base64:5]!./selectSlider.css", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js?modules&importLoaders=1&localIdentName=[local]__[hash:base64:5]!./selectSlider.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 181 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(174)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".slider__oEpVk {\n    overflow: hidden;\n    margin: 10px 0;\n}\n.slider_use__2lVrg .slider_range__2Hd5_{\n    background-color: #ccc;\n    cursor: pointer;\n}\n.slider_use__2lVrg .slider_fill__2AwYH {\n    opacity: 1;\n}\n.slider_use__2lVrg .slider_title__JozZ8 {\n    color: #000;\n}\n.slider_title__JozZ8 {\n    float: left;\n    display: inline-block;\n    margin-right: 5px;\n    color: #888;\n}\n.slider_title__JozZ8 input {\n    margin: 0 3px;\n}\n.slider_title__JozZ8 label {\n    display: inline-block;\n    line-height: 20px;\n}\n.slider_range__2Hd5_ {\n    position: relative;\n    float: left;\n    margin: 10px 0;\n    width: 238px;\n    height: 3px;\n    background-color: #f5f5f5;\n}\n.slider_fill__2AwYH {\n    width: 8px;\n    height: 3px;\n    background-color: #f00;\n    opacity: 0.3;\n}\n.slider_handle__2x8AS {\n    position: absolute;\n    top: -8px;\n    left: 0px;\n    width: 16px;\n    height: 16px;\n    border: 1px solid #ddd;\n    background: #fff;\n    -webkit-border-radius: 15px;\n    -moz-border-radius: 15px;\n    border-radius: 15px;\n}\n.slider_result__QHzQB {\n    display: inline-block;\n    float: left;\n    width: 20px;\n    height: 20px;\n    text-align: center;\n    font-size: 13px;\n    color: #888;\n    border: 1px solid #ddd;\n    outline: none;\n}\n.slider_result_use__3-2mb {\n\n}", ""]);
-
-	// exports
-	exports.locals = {
-		"slider": "slider__oEpVk",
-		"slider_use": "slider_use__2lVrg",
-		"slider_range": "slider_range__2Hd5_",
-		"slider_fill": "slider_fill__2AwYH",
-		"slider_title": "slider_title__JozZ8",
-		"slider_handle": "slider_handle__2x8AS",
-		"slider_result": "slider_result__QHzQB",
-		"slider_result_use": "slider_result_use__3-2mb"
-	};
-
-/***/ },
-/* 182 */
-/***/ function(module, exports, __webpack_require__) {
-
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
@@ -32147,15 +31925,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _pickerDateRange = __webpack_require__(183);
+	var _pickerDateRange = __webpack_require__(181);
 
 	var _pickerDateRange2 = _interopRequireDefault(_pickerDateRange);
 
-	var _formatDate = __webpack_require__(184);
+	var _formatDate = __webpack_require__(182);
 
 	var _formatDate2 = _interopRequireDefault(_formatDate);
 
-	var _dateRange = __webpack_require__(185);
+	var _dateRange = __webpack_require__(183);
 
 	var _dateRange2 = _interopRequireDefault(_dateRange);
 
@@ -32229,12 +32007,12 @@
 	;
 
 /***/ },
-/* 183 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _jquery = __webpack_require__(171);
+	var _jquery = __webpack_require__(172);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -33505,7 +33283,7 @@
 	module.exports = pickerDateRange;
 
 /***/ },
-/* 184 */
+/* 182 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -33533,16 +33311,16 @@
 	exports.default = formatDate;
 
 /***/ },
-/* 185 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(186);
+	var content = __webpack_require__(184);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(175)(content, {});
+	var update = __webpack_require__(176)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -33559,30 +33337,30 @@
 	}
 
 /***/ },
-/* 186 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(174)();
+	exports = module.exports = __webpack_require__(175)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "/**pickerDateRange*/\n.date {\n    border: 1px solid #d8d8d8;\n    -webkit-border-radius: 3px;\n    -moz-border-radius: 3px;\n    border-radius: 3px;\n    background-color: #fefefe;\n    background-image: -ms-linear-gradient(top, #fafafa, #f5f5f5);\n    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fafafa), to(#f5f5f5));\n    background-image: -moz-linear-gradient(top, #fafafa, #f5f5f5);\n    background-image: -o-linear-gradient(top, #fafafa, #f5f5f5);\n    background-image: linear-gradient(top, #fafafa, #f5f5f5);\n    background-repeat: repeat-x;\n    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n    box-shadow: 0px 1px 1px rgba(218,218,218,0.8);\n    float: left;\n    overflow: hidden;\n}\n.date .date_title {\n    font-family: Arial;\n    font-size: 14px;\n    color: #666666;\n    padding: 6px 10px;\n    border-right: 1px solid #d8d8d8;\n    vertical-align: middle;\n    cursor: pointer;\n}\n.date .opt_sel {\n    width: 30px;\n    height: 28px;\n    line-height: 28px;\n    display: inline-block;\n    text-align: center;\n    vertical-align: middle;\n    margin-left: -4px;\n}\n.date .i_orderd {\n    display: inline-block;\n    width: 0;\n    height: 0;\n    vertical-align: middle;\n    border-top: 5px solid #727272;\n    border-right: 5px dashed transparent;\n    border-left: 5px dashed transparent;\n    font-size: 0;\n    content: \"\";\n    overflow: hidden;\n}\n.date-section {\n    font-size: 12px;\n    margin: 5px 0 0 15px;\n    float: left;\n}\n.select li {\n    float: left;\n    list-style: none;\n    margin-left: 10px;\n}\n.mod_header .group_switch .group {\n    float: left;\n    white-space: nowrap;\n}\n.mod_header .group_switch {\n    position: relative;\n}\n.tool_title{\n    float:left;\n    padding-left:15px;\n    padding-top:15px;\n}\n.tool_date {\n    float:left;\n    padding-top:12px;\n    margin-bottom: 5px;\n}\n.mod_header .lable {\n    display: inline-block;\n    vertical-align: middle;\n    min-width: 4em;\n    text-align: justify;\n    font-size: 12px;\n}\n.mod_header .group_switch .group {\n    float: left;\n    white-space: nowrap;\n}\n.mod_header .group {\n    padding: 10px 30px 0 0px;\n}\n\n#generalTrend_wrap .btn {\n    padding:0px 10px;\n}\n#generalTrend_wrap .btn i {\n    color: #A73939;\n}\n\n#toolbar li.active a{\n    color: black;\n    font-weight: bold;\n}\n\n#realtime_period{\n    padding: 0 2px;\n}\n\n\n/**\n * =================================================\n * 日期选择器的TA主题\n * =================================================\n */\n.ta_date{\n    border:1px solid #d8d8d8;\n    -webkit-border-radius: 3px;\n    -moz-border-radius: 3px;\n    border-radius: 3px;\n    background-color: #fefefe;\n    background-image: -ms-linear-gradient(top, #fafafa, #f5f5f5);\n    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fafafa), to(#f5f5f5));\n    background-image: -moz-linear-gradient(top, #fafafa, #f5f5f5);\n    background-image: -o-linear-gradient(top, #fafafa, #f5f5f5);\n    background-image: linear-gradient(top, #fafafa, #f5f5f5);\n    background-repeat: repeat-x;\n    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n    box-shadow:0px 1px 1px rgba(218,218,218,0.8);\n    float:left;\n}\n\n.ta_date .date_title {\n    font-family:Arial;\n    font-size:14px;\n    color:#666666;\n    padding:6px 10px;\n    *padding:0px 10px;\n    border-right:1px solid #d8d8d8;\n    vertical-align:middle;\n    cursor:pointer;\n    *zoom:1;\n}\n.ta_date:hover {\n    background-image:none;\n    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);\n    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);\n    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);\n}\n.ta_date .to{ padding:0 5px;}\n.ta_date .opt_sel{/*====*/\n    width:30px;\n    height:28px;\n    line-height:28px;\n    display:inline-block;\n    text-align:center;\n    vertical-align:middle;\n    margin-left:-4px;\n}\n.ta_date a.opt_sel:link, .ta_date a.opt_sel:visited {\n\n}\n.ta_date a.opt_sel:active, .ta_date a.opt_sel:hover {\n\n}\n\n.ta_date .i_orderd{/*==下三角==*/\n    display: inline-block;\n    width: 0;\n    height: 0;\n    vertical-align:middle;\n    border-top: 5px solid #727272;\n    border-right: 5px dashed transparent;\n    border-left: 5px dashed transparent;\n    font-size:0;\n    content: \"\";\n    overflow:hidden;\n    *margin-top:10px;\n}\n\n/*=====日历确认展示标题=====日历控件=========*/\n.ta_calendar2{*width:536px;}\n.ta_calendar1{*width:268px;}\n.ta_calendar{\n    border: 1px solid #e1e1e1;\n    background-color: #ffffff;\n    border: 1px solid #ccc;\n    border: 1px solid rgba(0, 0, 0, 0.2);\n    -webkit-border-radius: 2px;\n    -moz-border-radius: 2px;\n    border-radius: 2px;\n    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);\n    -moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);\n    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);\n    -webkit-background-clip: padding-box;\n    -moz-background-clip: padding;\n    background-clip: padding-box;\n    font-size:12px;\n    text-align:left;\n    position:absolute;\n    z-index:100;\n}\n.i_pre,.i_next,.ta_calendar td.ta_dateRangeSelected,.ta_calendar td.first,.ta_calendar td.last,.ta_calendar td.today{\n    background:url(" + __webpack_require__(187) + ") no-repeat;\n    cursor:pointer;\n}\n.i_pre,.i_next{ width:23px; height:23px;display:inline-block; }\n.i_pre{ background-position:0 0;}\n.i_pre:hover{ background-position:-46px 0px;}\n.i_next{ background-position:-23px 0;}\n.i_next:hover{ background-position:-69px 0px;}\n\n.ta_calendar td.ta_dateRangeSelected{\n    background-position:-164px 2px;\n    color:#fff;\n}\n.ta_calendar td.ta_dateRangeGray{\n    color: #BBB;\n    cursor: default;\n}\n\n.ta_calendar td.first{\n    color:#6590c1;\n    background-position:-128px 2px;\n}\n.ta_calendar td.last{\n    color:#6590c1;\n    background-position:-200px 2px;\n}\n.ta_calendar td.today{\n    color:#fff;\n    background-position:-92px 2px;\n}\n.ta_calendar .dis{\n    color:#9e9e9e;\n}\n.ta_calendar table {\n    font-size: 12px;\n    float:left;\n    margin:0 8px;\n    _display:inline;\n    border-spacing:0 7px;\n    border-collapse:collapse;\n}\n.ta_calendar table caption{ text-align:center; height:35px; line-height:35px; font-size:14px;}\n.ta_calendar table thead tr {\n    border: 1px solid #e1e1e1;\n    background:#f7f8fa;\n    -webkit-box-shadow: inset 0px 1px 0 rgba(255, 255, 255, 1.0);\n    -moz-box-shadow: inset 0px 1px 0 rgba(255, 255, 255, 1.0);\n    box-shadow: inset 0px 1px 0 rgba(255, 255, 255, 1.0);\n    box-shadow:0px 1px 1px rgba(0,0,0,0.1);\n}\n.ta_calendar table thead th {\n    line-height: 20px;\n    padding: 4px 10px;\n    color:#444;\n    cursor: pointer;\n    text-align:left;\n    border-top: 1px solid #e1e1e1;\n    border-bottom: 1px solid #e1e1e1;\n}\n.ta_calendar table tbody td {\n    line-height: 20px;\n    padding: 4px 11px;\n    text-align: center;\n    white-space: nowrap;\n    font-family: \"Tahoma\";\n}\n\n.ta_calendar table.calendar-month {\n    font-size: 12px;\n    float:left;\n    margin:0 8px;\n    _display:inline;\n    border-spacing:7px;\n    border-collapse:separate;\n    margin-bottom:10px;\n}\n.calendar-month caption{\n    border-bottom:1px solid #E1E1E1;\n    *padding-bottom:0px;\n}\n\n.calendar-month tbody td {\n    line-height: 30px;\n    padding: 4px 11px;\n    text-align:center;\n    white-space:nowrap;\n    font-family:\"\\5FAE\\8F6F\\96C5\\9ED1\";\n    cursor:pointer;\n}\n.calendar-month td.hover,.calendar-month td:hover,.calendar-month caption span:hover{\n    color:#6590c1;\n    border:1px solid #6590c1;\n    padding: 3px 10px;\n    border-radius:2px;\n    cursor:pointer;\n}\n.calendar .dis:hover{\n    color:#9e9e9e;\n    border:1px solid #d3d5d6;\n    padding: 3px 10px;\n}\n.calendar-month td.current{\n    background:#6590c1;\n    color:#fff;\n    border-radius:2px;\n}\n\n.ta_calendar table thead th.sun{border-left: 1px solid #e1e1e1;}\n.ta_calendar table thead th.sat{border-right: 1px solid #e1e1e1;}\n\n.ta_calendar table tbody td {\n    line-height: 20px;\n    padding: 4px 11px;\n    text-align:center;\n    white-space:nowrap;\n    font-family:\"Tahoma\";\n}\n\n.ta_calendar_cont{position:relative;}\n.ta_calendar_cont .i_pre,.ta_calendar_cont .i_next{position:absolute; top:7px;}\n.ta_calendar_cont .i_pre{left:10px;}\n.ta_calendar_cont .i_next{right:10px;}\n.ta_calendar_footer{\n    border-top:1px solid #e5e5e5;\n    background:#fafafa;\n    padding-top:6px;\n    height:45px;\n}\n.ta_calendar_footer .frm_btn{\n    float:right;\n    padding-right:10px;\n}\n.ta_calendar_footer .frm_btn input{\n    margin-left:3px;\n}\n.ta_calendar_footer .frm_msg{\n    float:left;\n    padding-left:10px;\n    vertical-align:middle;\n}\n.ta_calendar_footer .ipt_text_s{\n    padding:4px 4px;\n}\n\ninput.ta_ipt_text, textarea.ta_ipt_textarea, input.ta_ipt_text_s {\n    border: 1px solid #CCCCCC;\n    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;\n    color: #555555;\n    font-size: 12px;\n    height: 30px;\n    line-height: 30px;\n    padding: 0px 4px;\n    position: relative;\n    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;\n    vertical-align: middle;\n    width: 180px;\n    z-index: 2;\n}\n\ninput.ta_ipt_text_s {\n    width: 65px;\n}\n/*这里是按钮的样式*/\n.ta_btn {\n    width:auto;\n    -moz-border-bottom-colors: none;\n    -moz-border-left-colors: none;\n    -moz-border-right-colors: none;\n    -moz-border-top-colors: none;\n    background-color: #F5F5F5;\n    background-image: -moz-linear-gradient(center top , #FEFEFE, #F5F5F5);\n    background-repeat: repeat-x;\n    border-color: #CACACA #CACACA #B3B3B3;\n    border-image: none;\n    border-radius: 2px 2px 2px 2px;\n    border-style: solid;\n    border-width: 1px;\n    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);\n    color: #333333;\n    cursor: pointer;\n    display: inline-block;\n    font-family: \"\\5FAE\\8F6F\\96C5\\9ED1\",\"\\5B8B\\4F53\";\n    font-size: 12px;\n    line-height: 20px;\n    margin-bottom: 0;\n    outline: 0 none;\n    padding: 3px 12px !important;\n    text-align: center;\n}\n.ta_btn:hover, .ta_btn:active, .ta_btn.active, .ta_btn.disabled, .ta_btn[disabled] {\n    color: #333333;\n}\n.ta_btn:hover {\n    background-color: #FEFEFE;\n    background-image: none;\n    color: #333333;\n    text-decoration: none;\n    transition: background-position 0.1s linear 0s;\n}\n.ta_btn:focus {\n    outline: thin dotted #333333;\n    outline-offset: -2px;\n}\n.ta_btn.active, .ta_btn:active {\n    background-color: #E6E6E6;\n    background-image: none;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset, 0 1px 2px rgba(0, 0, 0, 0.05);\n    outline: 0 none;\n}\n.ta_btn.disabled, .ta_btn[disabled] {\n    background-color: #E6E6E6;\n    background-image: none;\n    box-shadow: none;\n    cursor: default;\n    opacity: 0.65;\n}\n.ta_btn {\n    margin: 2px 5px 0 0;\n    vertical-align: top;\n}\n.ta_btn:hover{\n    background-position: 0 -16px;\n}\n.ta_btn_primary {\n    background-color: #B4D66F;\n    /*background-image: -moz-linear-gradient(center top , #C7E184, #A2CC59);*/\n    border: 1px solid #88AB4A;\n    color: #56740F;\n}\n.ta_btn_primary:hover{\n    background-color: #5C96DB;\n    /*background-image: -moz-linear-gradient(center top , #74A5ED, #4789CD);*/\n    border: 1px solid #286AB1;\n    color: #FFFFFF;\n}\n/*按钮样式结束*/\n\n.cf:after {\n    clear: both;\n}\n\n.cf:before, .cf:after {\n    content: \"\";\n    display: table;\n}\n\n.cf:before, .cf:after {\n    content: \"\";\n    display: table;\n}\n\nlabel.contrast {\n    color: #666666;\n    cursor: pointer;\n    float: left;\n    line-height: 20px;\n    margin: 4px 8px 0;\n}\n", ""]);
+	exports.push([module.id, "/**pickerDateRange*/\n.date {\n    border: 1px solid #d8d8d8;\n    -webkit-border-radius: 3px;\n    -moz-border-radius: 3px;\n    border-radius: 3px;\n    background-color: #fefefe;\n    background-image: -ms-linear-gradient(top, #fafafa, #f5f5f5);\n    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fafafa), to(#f5f5f5));\n    background-image: -moz-linear-gradient(top, #fafafa, #f5f5f5);\n    background-image: -o-linear-gradient(top, #fafafa, #f5f5f5);\n    background-image: linear-gradient(top, #fafafa, #f5f5f5);\n    background-repeat: repeat-x;\n    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n    box-shadow: 0px 1px 1px rgba(218,218,218,0.8);\n    float: left;\n    overflow: hidden;\n}\n.date .date_title {\n    font-family: Arial;\n    font-size: 14px;\n    color: #666666;\n    padding: 6px 10px;\n    border-right: 1px solid #d8d8d8;\n    vertical-align: middle;\n    cursor: pointer;\n}\n.date .opt_sel {\n    width: 30px;\n    height: 28px;\n    line-height: 28px;\n    display: inline-block;\n    text-align: center;\n    vertical-align: middle;\n    margin-left: -4px;\n}\n.date .i_orderd {\n    display: inline-block;\n    width: 0;\n    height: 0;\n    vertical-align: middle;\n    border-top: 5px solid #727272;\n    border-right: 5px dashed transparent;\n    border-left: 5px dashed transparent;\n    font-size: 0;\n    content: \"\";\n    overflow: hidden;\n}\n.date-section {\n    font-size: 12px;\n    margin: 5px 0 0 15px;\n    float: left;\n}\n.select li {\n    float: left;\n    list-style: none;\n    margin-left: 10px;\n}\n.mod_header .group_switch .group {\n    float: left;\n    white-space: nowrap;\n}\n.mod_header .group_switch {\n    position: relative;\n}\n.tool_title{\n    float:left;\n    padding-left:15px;\n    padding-top:15px;\n}\n.tool_date {\n    float:left;\n    padding-top:12px;\n    margin-bottom: 5px;\n}\n.mod_header .lable {\n    display: inline-block;\n    vertical-align: middle;\n    min-width: 4em;\n    text-align: justify;\n    font-size: 12px;\n}\n.mod_header .group_switch .group {\n    float: left;\n    white-space: nowrap;\n}\n.mod_header .group {\n    padding: 10px 30px 0 0px;\n}\n\n#generalTrend_wrap .btn {\n    padding:0px 10px;\n}\n#generalTrend_wrap .btn i {\n    color: #A73939;\n}\n\n#toolbar li.active a{\n    color: black;\n    font-weight: bold;\n}\n\n#realtime_period{\n    padding: 0 2px;\n}\n\n\n/**\n * =================================================\n * 日期选择器的TA主题\n * =================================================\n */\n.ta_date{\n    border:1px solid #d8d8d8;\n    -webkit-border-radius: 3px;\n    -moz-border-radius: 3px;\n    border-radius: 3px;\n    background-color: #fefefe;\n    background-image: -ms-linear-gradient(top, #fafafa, #f5f5f5);\n    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fafafa), to(#f5f5f5));\n    background-image: -moz-linear-gradient(top, #fafafa, #f5f5f5);\n    background-image: -o-linear-gradient(top, #fafafa, #f5f5f5);\n    background-image: linear-gradient(top, #fafafa, #f5f5f5);\n    background-repeat: repeat-x;\n    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n    box-shadow:0px 1px 1px rgba(218,218,218,0.8);\n    float:left;\n}\n\n.ta_date .date_title {\n    font-family:Arial;\n    font-size:14px;\n    color:#666666;\n    padding:6px 10px;\n    *padding:0px 10px;\n    border-right:1px solid #d8d8d8;\n    vertical-align:middle;\n    cursor:pointer;\n    *zoom:1;\n}\n.ta_date:hover {\n    background-image:none;\n    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);\n    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);\n    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);\n}\n.ta_date .to{ padding:0 5px;}\n.ta_date .opt_sel{/*====*/\n    width:30px;\n    height:28px;\n    line-height:28px;\n    display:inline-block;\n    text-align:center;\n    vertical-align:middle;\n    margin-left:-4px;\n}\n.ta_date a.opt_sel:link, .ta_date a.opt_sel:visited {\n\n}\n.ta_date a.opt_sel:active, .ta_date a.opt_sel:hover {\n\n}\n\n.ta_date .i_orderd{/*==下三角==*/\n    display: inline-block;\n    width: 0;\n    height: 0;\n    vertical-align:middle;\n    border-top: 5px solid #727272;\n    border-right: 5px dashed transparent;\n    border-left: 5px dashed transparent;\n    font-size:0;\n    content: \"\";\n    overflow:hidden;\n    *margin-top:10px;\n}\n\n/*=====日历确认展示标题=====日历控件=========*/\n.ta_calendar2{*width:536px;}\n.ta_calendar1{*width:268px;}\n.ta_calendar{\n    border: 1px solid #e1e1e1;\n    background-color: #ffffff;\n    border: 1px solid #ccc;\n    border: 1px solid rgba(0, 0, 0, 0.2);\n    -webkit-border-radius: 2px;\n    -moz-border-radius: 2px;\n    border-radius: 2px;\n    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);\n    -moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);\n    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);\n    -webkit-background-clip: padding-box;\n    -moz-background-clip: padding;\n    background-clip: padding-box;\n    font-size:12px;\n    text-align:left;\n    position:absolute;\n    z-index:100;\n}\n.i_pre,.i_next,.ta_calendar td.ta_dateRangeSelected,.ta_calendar td.first,.ta_calendar td.last,.ta_calendar td.today{\n    background:url(" + __webpack_require__(185) + ") no-repeat;\n    cursor:pointer;\n}\n.i_pre,.i_next{ width:23px; height:23px;display:inline-block; }\n.i_pre{ background-position:0 0;}\n.i_pre:hover{ background-position:-46px 0px;}\n.i_next{ background-position:-23px 0;}\n.i_next:hover{ background-position:-69px 0px;}\n\n.ta_calendar td.ta_dateRangeSelected{\n    background-position:-164px 2px;\n    color:#fff;\n}\n.ta_calendar td.ta_dateRangeGray{\n    color: #BBB;\n    cursor: default;\n}\n\n.ta_calendar td.first{\n    color:#6590c1;\n    background-position:-128px 2px;\n}\n.ta_calendar td.last{\n    color:#6590c1;\n    background-position:-200px 2px;\n}\n.ta_calendar td.today{\n    color:#fff;\n    background-position:-92px 2px;\n}\n.ta_calendar .dis{\n    color:#9e9e9e;\n}\n.ta_calendar table {\n    font-size: 12px;\n    float:left;\n    margin:0 8px;\n    _display:inline;\n    border-spacing:0 7px;\n    border-collapse:collapse;\n}\n.ta_calendar table caption{ text-align:center; height:35px; line-height:35px; font-size:14px;}\n.ta_calendar table thead tr {\n    border: 1px solid #e1e1e1;\n    background:#f7f8fa;\n    -webkit-box-shadow: inset 0px 1px 0 rgba(255, 255, 255, 1.0);\n    -moz-box-shadow: inset 0px 1px 0 rgba(255, 255, 255, 1.0);\n    box-shadow: inset 0px 1px 0 rgba(255, 255, 255, 1.0);\n    box-shadow:0px 1px 1px rgba(0,0,0,0.1);\n}\n.ta_calendar table thead th {\n    line-height: 20px;\n    padding: 4px 10px;\n    color:#444;\n    cursor: pointer;\n    text-align:left;\n    border-top: 1px solid #e1e1e1;\n    border-bottom: 1px solid #e1e1e1;\n}\n.ta_calendar table tbody td {\n    line-height: 20px;\n    padding: 4px 11px;\n    text-align: center;\n    white-space: nowrap;\n    font-family: \"Tahoma\";\n}\n\n.ta_calendar table.calendar-month {\n    font-size: 12px;\n    float:left;\n    margin:0 8px;\n    _display:inline;\n    border-spacing:7px;\n    border-collapse:separate;\n    margin-bottom:10px;\n}\n.calendar-month caption{\n    border-bottom:1px solid #E1E1E1;\n    *padding-bottom:0px;\n}\n\n.calendar-month tbody td {\n    line-height: 30px;\n    padding: 4px 11px;\n    text-align:center;\n    white-space:nowrap;\n    font-family:\"\\5FAE\\8F6F\\96C5\\9ED1\";\n    cursor:pointer;\n}\n.calendar-month td.hover,.calendar-month td:hover,.calendar-month caption span:hover{\n    color:#6590c1;\n    border:1px solid #6590c1;\n    padding: 3px 10px;\n    border-radius:2px;\n    cursor:pointer;\n}\n.calendar .dis:hover{\n    color:#9e9e9e;\n    border:1px solid #d3d5d6;\n    padding: 3px 10px;\n}\n.calendar-month td.current{\n    background:#6590c1;\n    color:#fff;\n    border-radius:2px;\n}\n\n.ta_calendar table thead th.sun{border-left: 1px solid #e1e1e1;}\n.ta_calendar table thead th.sat{border-right: 1px solid #e1e1e1;}\n\n.ta_calendar table tbody td {\n    line-height: 20px;\n    padding: 4px 11px;\n    text-align:center;\n    white-space:nowrap;\n    font-family:\"Tahoma\";\n}\n\n.ta_calendar_cont{position:relative;}\n.ta_calendar_cont .i_pre,.ta_calendar_cont .i_next{position:absolute; top:7px;}\n.ta_calendar_cont .i_pre{left:10px;}\n.ta_calendar_cont .i_next{right:10px;}\n.ta_calendar_footer{\n    border-top:1px solid #e5e5e5;\n    background:#fafafa;\n    padding-top:6px;\n    height:45px;\n}\n.ta_calendar_footer .frm_btn{\n    float:right;\n    padding-right:10px;\n}\n.ta_calendar_footer .frm_btn input{\n    margin-left:3px;\n}\n.ta_calendar_footer .frm_msg{\n    float:left;\n    padding-left:10px;\n    vertical-align:middle;\n}\n.ta_calendar_footer .ipt_text_s{\n    padding:4px 4px;\n}\n\ninput.ta_ipt_text, textarea.ta_ipt_textarea, input.ta_ipt_text_s {\n    border: 1px solid #CCCCCC;\n    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;\n    color: #555555;\n    font-size: 12px;\n    height: 30px;\n    line-height: 30px;\n    padding: 0px 4px;\n    position: relative;\n    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;\n    vertical-align: middle;\n    width: 180px;\n    z-index: 2;\n}\n\ninput.ta_ipt_text_s {\n    width: 65px;\n}\n/*这里是按钮的样式*/\n.ta_btn {\n    width:auto;\n    -moz-border-bottom-colors: none;\n    -moz-border-left-colors: none;\n    -moz-border-right-colors: none;\n    -moz-border-top-colors: none;\n    background-color: #F5F5F5;\n    background-image: -moz-linear-gradient(center top , #FEFEFE, #F5F5F5);\n    background-repeat: repeat-x;\n    border-color: #CACACA #CACACA #B3B3B3;\n    border-image: none;\n    border-radius: 2px 2px 2px 2px;\n    border-style: solid;\n    border-width: 1px;\n    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);\n    color: #333333;\n    cursor: pointer;\n    display: inline-block;\n    font-family: \"\\5FAE\\8F6F\\96C5\\9ED1\",\"\\5B8B\\4F53\";\n    font-size: 12px;\n    line-height: 20px;\n    margin-bottom: 0;\n    outline: 0 none;\n    padding: 3px 12px !important;\n    text-align: center;\n}\n.ta_btn:hover, .ta_btn:active, .ta_btn.active, .ta_btn.disabled, .ta_btn[disabled] {\n    color: #333333;\n}\n.ta_btn:hover {\n    background-color: #FEFEFE;\n    background-image: none;\n    color: #333333;\n    text-decoration: none;\n    transition: background-position 0.1s linear 0s;\n}\n.ta_btn:focus {\n    outline: thin dotted #333333;\n    outline-offset: -2px;\n}\n.ta_btn.active, .ta_btn:active {\n    background-color: #E6E6E6;\n    background-image: none;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset, 0 1px 2px rgba(0, 0, 0, 0.05);\n    outline: 0 none;\n}\n.ta_btn.disabled, .ta_btn[disabled] {\n    background-color: #E6E6E6;\n    background-image: none;\n    box-shadow: none;\n    cursor: default;\n    opacity: 0.65;\n}\n.ta_btn {\n    margin: 2px 5px 0 0;\n    vertical-align: top;\n}\n.ta_btn:hover{\n    background-position: 0 -16px;\n}\n.ta_btn_primary {\n    background-color: #B4D66F;\n    /*background-image: -moz-linear-gradient(center top , #C7E184, #A2CC59);*/\n    border: 1px solid #88AB4A;\n    color: #56740F;\n}\n.ta_btn_primary:hover{\n    background-color: #5C96DB;\n    /*background-image: -moz-linear-gradient(center top , #74A5ED, #4789CD);*/\n    border: 1px solid #286AB1;\n    color: #FFFFFF;\n}\n/*按钮样式结束*/\n\n.cf:after {\n    clear: both;\n}\n\n.cf:before, .cf:after {\n    content: \"\";\n    display: table;\n}\n\n.cf:before, .cf:after {\n    content: \"\";\n    display: table;\n}\n\nlabel.contrast {\n    color: #666666;\n    cursor: pointer;\n    float: left;\n    line-height: 20px;\n    margin: 4px 8px 0;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 187 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "components/DateRange/calendar_all.png";
 
 /***/ },
-/* 188 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -33594,9 +33372,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _timeline = __webpack_require__(189);
+	var _selectSlider = __webpack_require__(187);
 
-	var _timeline2 = _interopRequireDefault(_timeline);
+	var _selectSlider2 = _interopRequireDefault(_selectSlider);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33606,48 +33384,184 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var App = function (_React$Component) {
-	    _inherits(App, _React$Component);
+	var SliderGroups = function (_React$Component) {
+	    _inherits(SliderGroups, _React$Component);
 
-	    function App(props) {
-	        _classCallCheck(this, App);
+	    function SliderGroups(props) {
+	        _classCallCheck(this, SliderGroups);
 
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this, props));
+	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(SliderGroups).call(this, props));
+
+	        _this.state = {
+	            isSelected: false,
+	            isDown: false
+	        };
+
+	        _this.handleSelected = _this.handleSelected.bind(_this);
+	        _this.handleMousedown = _this.handleMousedown.bind(_this);
+	        _this.handleMousemove = _this.handleMousemove.bind(_this);
+	        _this.handleMouseup = _this.handleMouseup.bind(_this);
+	        _this.handleClick = _this.handleClick.bind(_this);
+	        _this.getElementLeft = _this.getElementLeft.bind(_this);
+	        return _this;
 	    }
 
-	    _createClass(App, [{
-	        key: 'componentDidMount',
-	        value: function componentDidMount() {}
+	    _createClass(SliderGroups, [{
+	        key: "componentDidMount",
+	        value: function componentDidMount() {
+	            window.addEventListener('mousemove', this.handleMousemove, false);
+	            window.addEventListener('mouseup', this.handleMouseup, false);
+	        }
 	    }, {
-	        key: 'render',
+	        key: "getElementLeft",
+	        value: function getElementLeft(element) {
+	            var actualLeft = element.offsetLeft;
+	            var currentElem = element.offsetParent;
+	            while (currentElem !== null) {
+	                actualLeft += currentElem.offsetLeft;
+	                currentElem = currentElem.offsetParent;
+	            }
+	            return actualLeft;
+	        }
+	    }, {
+	        key: "handleSelected",
+	        value: function handleSelected() {
+	            this.setState({
+	                isSelected: !this.state.isSelected
+	            });
+	            if (this.state.isSelected) {}
+	        }
+	    }, {
+	        key: "handleMousedown",
+	        value: function handleMousedown(e) {
+	            if (!this.state.standand) {
+	                this.setState({
+	                    isDown: true,
+	                    offsetX: e.clientX - this.getElementLeft(e.currentTarget)
+	                });
+	            }
+	        }
+	    }, {
+	        key: "handleMousemove",
+	        value: function handleMousemove(e) {
+	            if (this.state.isSelected && this.state.isDown) {
+	                var handle = this.refs.handle;
+	                var range = this.refs.handle.parentNode;
+	                var fill = this.refs.handle.previousSibling;
+	                var left = this.getElementLeft(range);
+
+	                var r = handle.clientWidth / 2;
+	                var max = range.clientWidth - 2 * r;
+	                var x = e.clientX - this.state.offsetX - left;
+
+	                if (x <= 0) {
+	                    x = 0;
+	                } else if (x >= max) {
+	                    x = max;
+	                }
+	                var result = Math.floor((x / max).toFixed(2) * 10);
+	                if (result >= 10) {
+	                    result = 10;
+	                }
+	                this.setState({
+	                    result: result
+	                });
+	                handle.style.left = x + 'px';
+	                fill.style.width = x + r + 'px';
+	            }
+	        }
+	    }, {
+	        key: "handleMouseup",
+	        value: function handleMouseup() {
+	            this.setState({
+	                isDown: false
+	            });
+	        }
+	    }, {
+	        key: "handleClick",
+	        value: function handleClick(e) {
+	            if (this.state.isSelected) {
+	                var handle = this.refs.handle;
+	                var range = this.refs.handle.parentNode;
+	                var fill = this.refs.handle.previousSibling;
+	                var left = this.getElementLeft(range);
+
+	                var r = handle.clientWidth / 2;
+	                var max = range.clientWidth - 2 * r;
+	                var x = e.clientX - r - left;
+
+	                if (x < 0) {
+	                    handle.style.left = 0 + 'px';
+	                    fill.style.width = r + 'px';
+	                } else if (x > max) {
+	                    handle.style.left = max + 'px';
+	                    fill.style.width = max + r + 'px';
+	                } else {
+	                    handle.style.left = x + 'px';
+	                    fill.style.width = x + r + 'px';
+	                }
+	                var result = Math.floor((x / max).toFixed(2) * 10);
+	                if (result >= 10) {
+	                    result = 10;
+	                }
+	                if (result < 0) {
+	                    result = 0;
+	                }
+	                this.setState({
+	                    result: result
+	                });
+	            }
+	        }
+	    }, {
+	        key: "render",
 	        value: function render() {
-	            return _react2.default.createElement('div', { className: _timeline2.default.timeline });
+	            return _react2.default.createElement(
+	                "div",
+	                { className: this.state.isSelected ? _selectSlider2.default.slider + ' ' + _selectSlider2.default.slider_use : _selectSlider2.default.slider },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: _selectSlider2.default.slider_title },
+	                    _react2.default.createElement("input", { type: "checkbox", disabled: this.state.standand, onChange: this.handleSelected }),
+	                    _react2.default.createElement(
+	                        "label",
+	                        { htmlFor: "" },
+	                        this.props.name
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: _selectSlider2.default.slider_range, onClick: this.handleClick },
+	                    _react2.default.createElement("div", { className: _selectSlider2.default.slider_fill }),
+	                    _react2.default.createElement("div", { className: _selectSlider2.default.slider_handle, ref: "handle", onMouseDown: this.handleMousedown, onMouseUp: this.handleMouseup })
+	                ),
+	                _react2.default.createElement("input", { className: _selectSlider2.default.slider_result, type: "text", value: this.state.result })
+	            );
 	        }
 	    }]);
 
-	    return App;
+	    return SliderGroups;
 	}(_react2.default.Component);
 
-	exports.default = App;
+	exports.default = SliderGroups;
 
 /***/ },
-/* 189 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(190);
+	var content = __webpack_require__(188);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(175)(content, {});
+	var update = __webpack_require__(176)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js?modules&importLoaders=1&localIdentName=[local]__[hash:base64:5]!./timeline.css", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js?modules&importLoaders=1&localIdentName=[local]__[hash:base64:5]!./timeline.css");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?modules&importLoaders=1&localIdentName=[local]__[hash:base64:5]!./selectSlider.css", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?modules&importLoaders=1&localIdentName=[local]__[hash:base64:5]!./selectSlider.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -33657,19 +33571,26 @@
 	}
 
 /***/ },
-/* 190 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(174)();
+	exports = module.exports = __webpack_require__(175)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".timeline__2cbzn {\n\n}", ""]);
+	exports.push([module.id, ".slider__oEpVk {\n    overflow: hidden;\n    margin: 10px 0;\n}\n.slider_use__2lVrg .slider_range__2Hd5_{\n    background-color: #ccc;\n    cursor: pointer;\n}\n.slider_use__2lVrg .slider_fill__2AwYH {\n    opacity: 1;\n}\n.slider_use__2lVrg .slider_title__JozZ8 {\n    color: #000;\n}\n.slider_title__JozZ8 {\n    float: left;\n    display: inline-block;\n    margin-right: 5px;\n    color: #888;\n}\n.slider_title__JozZ8 input {\n    margin: 0 3px;\n}\n.slider_title__JozZ8 label {\n    display: inline-block;\n    line-height: 20px;\n}\n.slider_range__2Hd5_ {\n    position: relative;\n    float: left;\n    margin: 10px 0;\n    width: 238px;\n    height: 3px;\n    background-color: #f5f5f5;\n}\n.slider_fill__2AwYH {\n    width: 8px;\n    height: 3px;\n    background-color: #f00;\n    opacity: 0.3;\n}\n.slider_handle__2x8AS {\n    position: absolute;\n    top: -8px;\n    left: 0px;\n    width: 16px;\n    height: 16px;\n    border: 1px solid #ddd;\n    background: #fff;\n    -webkit-border-radius: 15px;\n    -moz-border-radius: 15px;\n    border-radius: 15px;\n}\n.slider_result__QHzQB {\n    display: inline-block;\n    float: left;\n    width: 20px;\n    height: 20px;\n    text-align: center;\n    font-size: 13px;\n    color: #888;\n    border: 1px solid #ddd;\n    outline: none;\n}\n.slider_result_use__3-2mb {\n\n}", ""]);
 
 	// exports
 	exports.locals = {
-		"timeline": "timeline__2cbzn"
+		"slider": "slider__oEpVk",
+		"slider_use": "slider_use__2lVrg",
+		"slider_range": "slider_range__2Hd5_",
+		"slider_fill": "slider_fill__2AwYH",
+		"slider_title": "slider_title__JozZ8",
+		"slider_handle": "slider_handle__2x8AS",
+		"slider_result": "slider_result__QHzQB",
+		"slider_result_use": "slider_result_use__3-2mb"
 	};
 
 /***/ }
