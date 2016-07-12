@@ -19,6 +19,8 @@
     "classnames": "^2.2.5",
     "css-loader": "^0.23.1",
     "gulp": "^3.9.1",
+    "gulp-foreach": "^0.1.0",
+    "gulp-minify": "0.0.12",
     "gulp-webpack": "^1.5.0",
     "jquery": "^3.0.0",
     "style-loader": "^0.13.1",

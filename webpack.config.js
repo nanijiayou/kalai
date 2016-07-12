@@ -7,7 +7,7 @@ var webpack = require("webpack");
 
 module.exports = {
     entry: {
-        dist: "./components/index.js",
+        dist: "./components/Search/Search.js",
         index: "./index.js"
     },
     output: {
