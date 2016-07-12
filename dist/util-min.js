@@ -1,1 +1,0 @@
-define("juejin:static/js/util.js",function(n,e,t){t.exports={getUrlParam:function(n){var e=new RegExp("(^|&)"+n+"=([^&]*)(&|$)"),t=window.location.search.substr(1).match(e);return null!=t?unescape(t[2]):null}}});
