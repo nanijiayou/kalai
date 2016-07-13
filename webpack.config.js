@@ -7,8 +7,7 @@ var webpack = require("webpack");
 
 module.exports = {
     entry: {
-        dist: "./components/Search/Search.js",
-        index: "./index.js"
+        test: "./test.js"
     },
     output: {
         path: path.join(__dirname, 'lib'),
